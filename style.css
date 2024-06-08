@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --text-color: #FFFFFF;
+    --icon-color: #ACACBE;
+    --placeholder-color: #CCCCCC;
+    --outgoing-chat-bg: #343541;
+    --incoming-chat-bg: #444654;
+    --outgoing-chat-border: #343541;
+    --incoming-chat-border: #444654;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--outgoing-chat-bg);
+    padding: 20px;
+    margin: 0;
+}
+
+.chat-container {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.chat {
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    color: var(--text-color);
+    align-items: flex-start;
+}
+
+.chat.outgoing {
+    background: var(--outgoing-chat-bg);
+    border: 1px solid var(--outgoing-chat-border);
+    align-self: flex-end;
+}
+
+.chat.incoming {
+    background: var(--incoming-chat-bg);
+    border: 1px solid var(--incoming-chat-border);
+    align-self: flex-start;
+}
+
+.chat .chat-details {
+    display: flex;
+    gap: 10px;
+}
+
+.chat .chat-details img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.chat p {
+    margin: 0;
+    max-width: 500px;
+}
+
+.chat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.material-symbols-rounded {
+    color: var(--icon-color);
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--placeholder-color);
+    color: var(--text-color);
+    background: var(--incoming-chat-bg);
+}
+
+#send-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: var(--icon-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
